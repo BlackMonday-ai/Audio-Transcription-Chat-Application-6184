@@ -1,0 +1,98 @@
+/* Mobile-first responsive design */
+.main-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 1280px;
+    padding: 2rem;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  .button-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .input-touch-target {
+    min-height: 44px;
+  }
+  
+  /* Adjust font sizes for mobile */
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+  }
+
+  /* Make buttons more touchable */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Adjust spacing for mobile */
+  .p-4 {
+    padding: 0.75rem;
+  }
+
+  .gap-4 {
+    gap: 0.75rem;
+  }
+}
+
+/* Fix voice input positioning */
+.voice-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.voice-input-controls {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+/* Improve history menu on mobile */
+.history-menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+@media (min-width: 768px) {
+  .history-menu-mobile {
+    width: 20rem;
+  }
+}
+
+/* Fix markdown rendering on mobile */
+.prose-sm {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .prose-sm {
+    font-size: 0.8125rem;
+  }
+}
